@@ -35,10 +35,10 @@ class WeatherDisplay extends Component {
           {weather.main} in {weatherData.name}
           <img src={iconUrl} alt={weatherData.description} />
         </h1>
-        <p>Текущая: {weatherData.main.temp - 273.15}C°</p>
-        <p>Максимальная: {weatherData.main.temp_max - 273.15}C°</p>
-        <p>Минимальная: {weatherData.main.temp_min - 273.15}C°</p>
-        <p>Скорость ветра: {weatherData.wind.speed} М/С</p>
+        <p>Текущая: { Math.round(weatherData.main.temp - 273.15) }C°</p>
+        <p>Максимальная: { Math.round(weatherData.main.temp_max - 273.15) }C°</p>
+        <p>Минимальная: { Math.round(weatherData.main.temp_min - 273.15) }C°</p>
+        <p>Скорость ветра: { Math.round(weatherData.wind.speed) } М/С</p>
       </div>
     );
   }
